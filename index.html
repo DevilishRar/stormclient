@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storm Client</title>
+    <link rel="icon" href="https://cdn.discordapp.com/icons/1238459665352884284/8ef93b2b47c2ebf69b9278638c350d1d.webp?size=96">
+    <meta name="theme-color" content="#00FFFF">
+    <meta property="og:title" content="Storm Client">
+    <meta property="og:description" content="The best script for cheating">
+    <meta property="og:image" content="https://cdn.discordapp.com/icons/1238459665352884284/8ef93b2b47c2ebf69b9278638c350d1d.webp?size=96">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function generateStars(count) {
+            const starsContainer = document.getElementById('stars');
+            starsContainer.innerHTML = '';
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 110 + 'vh';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        function adjustWidth() {
+            const navbar = document.querySelector('.navbar');
+            const maxWidth = getComputedStyle(navbar).maxWidth;
+            const elements = document.querySelectorAll('.container, .main-content, .section, .features-cards');
+            elements.forEach(element => {
+            });
+        }
+
+        window.onload = () => {
+            document.body.classList.add('fade-in');
+            generateStars(300);
+            adjustWidth();
+        }
+
+        window.onresize = adjustWidth;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.style.overflow = 'scroll';
+        });
+
+        function scrollToSection(id) {
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @font-face {
+            font-family: 'Bernie';
+            src: url('MODERNIZ900.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Gotham';
+            font-weight: bold;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/gotham/1.0/gotham-bold.otf') format('opentype');
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        .star {
+            position: absolute;
+            width: 3.7px;
+            height: 3.7px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #fff;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                opacity: 0.5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .navbar {
+            background-color: #111;
+            border-radius: 1rem;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 1500px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #00bcd4;
+        }
+        .btn-discord {
+            background-color: transparent;
+            border: 1px solid #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-discord:hover {
+            background-color: #00bcd4;
+            color: #fff;
+        }
+        .main-content {
+            text-align: left;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            transition: opacity 2s ease-in;
+        }
+        .main-content .main-title {
+            font-family: 'Bernie', sans-serif;
+            background: linear-gradient(90deg, #00bcd4, #00e5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s infinite;
+            text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .buttons {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-purchase-now {
+            background-color: #00bcd4;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btn-purchase-now:hover {
+            background-color: #00e5ff;
+            color: #fff;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .section .card {
+            display: inline-block;
+            width: 250px;
+            background-color: #111;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            height: 360px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-sizing: border-box;
+        }
+        .section .card:hover {
+            transform: translateY(-10px);
+            background-color: #222;
+        }
+        .section .card h3 {
+            font-family: 'Gotham', sans-serif;
+            background: linear-gradient(90deg, #00bcd4, #00e5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section .card p {
+            color: #888;
+        }
+        .features-cards {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .hover-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-img {
+            width: 450px;
+            height: 300px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 50px 15px #004d40;
+          
+            transition: box-shadow 0.1s, transform 0.1s;
+            cursor: pointer;
+        }
+        .fa-cyan {
+            color: #00bcd4;
+        }
+    </style>
+</head>
+<body>
+    <div id="stars" style="z-index: -1;"></div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="flex items-center">
+        <img src="https://cdn.discordapp.com/icons/1238459665352884284/8ef93b2b47c2ebf69b9278638c350d1d.webp?size=96" alt="Storm Hub Logo" class="h-10 w-10 rounded-lg" style="filter: invert(100%);">
+            </div>
+            <div class="flex items-center">
+                <a href="#home">Home</a>
+                <a href="https://discord.gg/bnUPRWjxuC" target="_blank">Services</a>
+            </div>
+            <div>
+                <a href="https://discord.gg/bnUPRWjxuC" target="_blank" class="btn-discord">Discord</a>
+            </div>
+        </nav>
+
+        <header class="main-content fade-in" id="home">
+            <div>
+                <h1 class="text-5xl font-bold main-title">STORM HUB</h1>
+                <p class="text-xl mt-4">Experience a new level of control in Roblox</p>
+                <div class="buttons mt-6">
+                    <a href="https://discord.gg/bnUPRWjxuC" class="btn-purchase-now">Purchase Now</a>
+                </div>
+            </div>
+            <div>
+                <img src="https://media.discordapp.net/attachments/1223176100822253648/1267893896982036501/image.png?ex=66aa71b5&is=66a92035&hm=ddd0a9a5aa5ec69bb48bebdaf46d0d9e2d1cad8e6945a9ab23a21b3cd79dcfb4&=&format=webp&quality=lossless" alt="Showcase Image" class="rounded-lg hover-img">
+            </div>
+        </header>
+
+        <section class="section features-cards">
+            <h2 class="text-3xl font-bold" style="background: linear-gradient(90deg, #00bcd4, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Features</h2>
+            <div class="flex justify-center items-start flex-wrap">
+                <div class="card">
+                    <i class="fas fa-code fa-3x fa-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold">Script Execution</h3>
+                    <p>Execute Storm client with any executor! Storm client supports all executors.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt fa-3x fa-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold">Anticheat Bypass</h3>
+                    <p>Our script bypasses the anticheats of the games. offering the ability to cheat in the game without detections.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-gamepad fa-3x fa-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold">Game Support</h3>
+                    <p>Storm Client supports 5 popular games: Project Smash, Maze Horror Game, Obby but you're on a bike, Blade Ball, and SharkBite 2.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tools fa-3x fa-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold">Best Script</h3>
+                    <p>Storm client is the best Script you can buy for the experience you wish for.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-headset fa-3x fa-cyan mb-4"></i>
+                    <h3 class="text-xl font-bold">24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you with any issues or questions you may have.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
